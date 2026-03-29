@@ -227,3 +227,4 @@ GPL v2 or later
 ## 支持
 
 如有问题或建议，请访问插件主页或联系开发者。
+# friendlink-apply
