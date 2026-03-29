@@ -1,0 +1,2218 @@
+:root {
+    --fl-gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --fl-gradient-success: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+    --fl-gradient-danger: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+    --fl-gradient-muted: linear-gradient(135deg, #666 0%, #444 100%);
+    --fl-gradient-warning: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    --fl-gradient-info: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+    --fl-gradient-error: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+    --fl-gradient-pink: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    --fl-gradient-red: linear-gradient(135deg, #ff8a8a 0%, #ff6b6b 100%);
+}
+
+.wp-friendlink-apply-applications {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.wp-friendlink-apply-applications .page-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    color: #1d2327;
+    font-size: 2em;
+}
+
+.wp-friendlink-apply-applications .page-title .icon {
+    font-size: 1.2em;
+    margin-right: 12px;
+}
+
+.wp-friendlink-apply-applications .nav-tab-wrapper {
+    margin-bottom: 5px;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.wp-friendlink-apply-applications .nav-tab {
+    position: relative;
+    padding: 12px 20px;
+    background: transparent;
+    border: none;
+    border-radius: 6px 6px 0 0;
+    color: #666;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin-right: 5px;
+}
+
+.wp-friendlink-apply-applications .nav-tab:hover {
+    background: #f5f5f5;
+    color: #1d2327;
+}
+
+.wp-friendlink-apply-applications .nav-tab.nav-tab-active {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+.wp-friendlink-apply-applications .nav-tab .count {
+    background: rgba(255, 255, 255, 0.3);
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 0.85em;
+    margin-left: 8px;
+    font-weight: 600;
+}
+
+.wp-friendlink-apply-applications .notice {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    border-radius: 8px;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+}
+
+.wp-friendlink-apply-applications .notice p {
+    margin: 0;
+    font-size: 1.1em;
+}
+
+.wp-friendlink-apply-applications .applications-table {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow-x: auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    table-layout: auto;
+    width: 100%;
+}
+
+.wp-friendlink-apply-applications .applications-table thead {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    white-space: nowrap;
+}
+
+.wp-friendlink-apply-applications .applications-table th {
+    padding: 15px 12px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.95em;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    white-space: nowrap;
+}
+
+.wp-friendlink-apply-applications .applications-table th:last-child {
+    border-right: none;
+}
+
+.wp-friendlink-apply-applications .applications-table tbody tr {
+    border-bottom: 1px solid #e0e0e0;
+    transition: background-color 0.2s ease;
+}
+
+.wp-friendlink-apply-applications .applications-table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+.wp-friendlink-apply-applications .applications-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.wp-friendlink-apply-applications .applications-table td {
+    padding: 15px 12px;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.wp-friendlink-apply-applications .applications-table .site-name {
+    font-weight: 600;
+    color: #1d2327;
+    font-size: 1.05em;
+    max-width: 180px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.wp-friendlink-apply-applications .applications-table .site-url {
+    color: #667eea;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.wp-friendlink-apply-applications .applications-table .site-url:hover {
+    color: #764ba2;
+    text-decoration: underline;
+}
+
+.wp-friendlink-apply-applications .applications-table .site-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    object-fit: cover;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.wp-friendlink-apply-applications .applications-table .default-icon {
+    font-size: 24px;
+    color: #999;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.wp-friendlink-apply-applications .applications-table .user-link {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.wp-friendlink-apply-applications .applications-table .user-link:hover {
+    color: #764ba2;
+    text-decoration: underline;
+}
+
+.wp-friendlink-apply-applications .applications-table .time {
+    color: #666;
+    font-size: 0.9em;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.wp-friendlink-apply-applications .applications-table .response-time-badge {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 10px;
+    font-size: 11px;
+    font-weight: 600;
+    margin-right: 6px;
+}
+
+.wp-friendlink-apply-applications .applications-table .response-time-badge.fast {
+    background: #d4edda;
+    color: #155724;
+}
+
+.wp-friendlink-apply-applications .applications-table .response-time-badge.medium {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.wp-friendlink-apply-applications .applications-table .response-time-badge.slow {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.wp-friendlink-apply-applications .applications-table .site-status-badge {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 10px;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.wp-friendlink-apply-applications .applications-table .site-status-badge.status-ok {
+    background: #d4edda;
+    color: #155724;
+}
+
+.wp-friendlink-apply-applications .applications-table .site-status-badge.status-client_error {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.wp-friendlink-apply-applications .applications-table .site-status-badge.status-server_error {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.wp-friendlink-apply-applications .applications-table .site-status-badge.status-error {
+    background: #e2e3e5;
+    color: #383d41;
+}
+
+.wp-friendlink-apply-applications .applications-table .actions {
+    display: flex;
+    gap: 5px;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+/* 空状态样式 */
+.wp-friendlink-apply-applications .applications-table .no-items td {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.wp-friendlink-apply-applications .applications-table .empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+}
+
+.wp-friendlink-apply-applications .applications-table .empty-icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+    opacity: 0.6;
+}
+
+.wp-friendlink-apply-applications .applications-table .empty-state p {
+    font-size: 16px;
+    margin: 0;
+    color: #888;
+}
+
+.wp-friendlink-apply-applications .applications-table .button {
+    padding: 4px 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+    min-width: 70px;
+    text-align: center;
+}
+
+.wp-friendlink-apply-applications .applications-table .button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.wp-friendlink-apply-applications .applications-table .button:active {
+    transform: translateY(0);
+}
+
+.wp-friendlink-apply-applications .applications-table .button-primary {
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+    color: #fff;
+}
+
+.wp-friendlink-apply-applications .applications-table .button-reject {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+    color: #fff;
+}
+
+.wp-friendlink-apply-applications .applications-table .button-delete {
+    background: linear-gradient(135deg, #666 0%, #444 100%);
+    color: #fff;
+}
+
+.wp-friendlink-apply-applications .applications-table .description {
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #666;
+}
+
+.wp-friendlink-apply-applications .applications-table .description:hover {
+    overflow: visible;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+.wp-list-table .approve-btn {
+    margin-right: 5px;
+    padding: 4px 12px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+.wp-list-table .approve-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.wp-list-table .reject-btn {
+    margin-right: 5px;
+    padding: 4px 12px;
+    background: #fff;
+    border: 2px solid #e53e3e;
+    border-radius: 6px;
+    color: #e53e3e;
+    font-weight: 600;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.wp-list-table .reject-btn:hover {
+    background: #e53e3e;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.wp-list-table .delete-btn {
+    padding: 4px 12px;
+    background: #fff;
+    border: 2px solid #dc3232;
+    border-radius: 6px;
+    color: #dc3232;
+    font-weight: 600;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.wp-list-table .delete-btn:hover {
+    background: #dc3232;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.nav-tab .count {
+    display: inline-block;
+    margin-left: 8px;
+    padding: 3px 10px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 700;
+    box-shadow: 0 2px 6px rgba(102, 126, 234, 0.3);
+    transition: all 0.3s ease;
+}
+
+.nav-tab .count:hover {
+    transform: scale(1.1);
+}
+
+.wp-friendlink-apply-status {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.wp-friendlink-apply-status.pending {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    color: #92400e;
+    border: 1px solid #fcd34d;
+}
+
+.wp-friendlink-apply-status.approved {
+    background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+    color: #065f46;
+    border: 1px solid #6ee7b7;
+}
+
+.wp-friendlink-apply-status.rejected {
+    background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+    color: #991b1b;
+    border: 1px solid #fca5a5;
+}
+
+.wp-friendlink-apply-meta {
+    background: #f7fafc;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 15px 0;
+    border-left: 4px solid #667eea;
+}
+
+.wp-friendlink-apply-meta p {
+    margin: 5px 0;
+    color: #4a5568;
+    font-size: 14px;
+}
+
+.wp-friendlink-apply-meta strong {
+    color: #2d3748;
+    font-weight: 600;
+}
+
+.wp-friendlink-apply-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px solid #e9ecef;
+}
+
+.wp-friendlink-apply-actions button {
+    flex: 1;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.wp-friendlink-apply-actions .btn-approve {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.wp-friendlink-apply-actions .btn-approve:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+}
+
+.wp-friendlink-apply-actions .btn-reject {
+    background: #fff;
+    border: 2px solid #e53e3e;
+    color: #e53e3e;
+}
+
+.wp-friendlink-apply-actions .btn-reject:hover {
+    background: #e53e3e;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.wp-friendlink-apply-actions .btn-delete {
+    background: #fff;
+    border: 2px solid #dc3232;
+    color: #dc3232;
+}
+
+.wp-friendlink-apply-actions .btn-delete:hover {
+    background: #dc3232;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.wp-friendlink-apply-settings {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.wp-friendlink-apply-settings .card {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.wp-friendlink-apply-settings .cards-container {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.wp-friendlink-apply-settings .cards-container .card {
+    flex: 1;
+    min-width: 300px;
+    margin-bottom: 0;
+}
+
+.wp-friendlink-apply-settings .card h3,
+.wp-friendlink-apply-settings .usage-section h3 {
+    margin-top: 0;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #2271b1;
+    color: #1d2327;
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+.wp-friendlink-apply-settings .card h4,
+.wp-friendlink-apply-settings .usage-section h4 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #1d2327;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+.wp-friendlink-apply-settings .usage-section h3 {
+    border-bottom: none;
+}
+
+.wp-friendlink-apply-settings .variables-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+    display: block;
+}
+
+.wp-friendlink-apply-settings .variables-table thead {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    white-space: nowrap;
+}
+
+.wp-friendlink-apply-settings .variables-table th {
+    padding: 12px 15px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.95em;
+    white-space: nowrap;
+}
+
+.wp-friendlink-apply-settings .variables-table tbody tr {
+    border-bottom: 1px solid #e0e0e0;
+    transition: background-color 0.2s ease;
+}
+
+.wp-friendlink-apply-settings .variables-table tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+.wp-friendlink-apply-settings .variables-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.wp-friendlink-apply-settings .variables-table td {
+    padding: 12px 15px;
+    vertical-align: middle;
+}
+
+.wp-friendlink-apply-settings .variables-table code {
+    background: #f0f0f0;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9em;
+    color: #d63384;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.wp-friendlink-apply-settings .variables-table .highlight-row {
+    background-color: #fff3cd !important;
+}
+
+.wp-friendlink-apply-settings .info-box {
+    background: #e7f3ff;
+    border-left: 4px solid #2196F3;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 4px;
+}
+
+.wp-friendlink-apply-settings .info-box strong {
+    color: #1565C0;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.wp-friendlink-apply-settings .info-box p {
+    margin: 5px 0;
+    color: #0d47a1;
+    line-height: 1.6;
+}
+
+.wp-friendlink-apply-settings .email-section {
+    margin-bottom: 5px;
+}
+
+.wp-friendlink-apply-settings .email-section-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 12px 15px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.wp-friendlink-apply-settings .email-section-header .icon {
+    font-size: 1.5em;
+    margin-right: 12px;
+}
+
+.wp-friendlink-apply-settings .email-section-header h3 {
+    margin: 0;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.wp-friendlink-apply-settings .email-section-header .badge {
+    margin-left: auto;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.85em;
+    font-weight: 500;
+}
+
+.wp-friendlink-apply-settings .form-table {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.wp-friendlink-apply-settings .form-table tr {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.wp-friendlink-apply-settings .form-table tr:last-child {
+    border-bottom: none;
+}
+
+.wp-friendlink-apply-settings .form-table th {
+    width: 200px;
+    padding: 15px 20px;
+    background: #f8f9fa;
+    font-weight: 600;
+    color: #1d2327;
+    border-right: 1px solid #e0e0e0;
+}
+
+.wp-friendlink-apply-settings .form-table td {
+    padding: 15px 20px;
+}
+
+.wp-friendlink-apply-settings .form-table input[type="text"],
+.wp-friendlink-apply-settings .form-table textarea {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.2s ease;
+}
+
+.wp-friendlink-apply-settings .form-table input[type="text"] {
+    max-width: 500px;
+    padding: 8px 12px;
+}
+
+.wp-friendlink-apply-settings .form-table textarea {
+    max-width: 600px;
+    padding: 10px 12px;
+    font-family: 'Courier New', monospace;
+    line-height: 1.6;
+    resize: vertical;
+    min-height: 80px;
+    max-height: 150px;
+}
+
+.wp-friendlink-apply-settings .form-table input[type="text"]:focus,
+.wp-friendlink-apply-settings .form-table textarea:focus {
+    outline: none;
+    border-color: #2271b1;
+    box-shadow: 0 0 0 3px rgba(34, 113, 177, 0.1);
+}
+
+.wp-friendlink-apply-settings .form-table .description {
+    margin-top: 8px;
+    color: #666;
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+
+.wp-friendlink-apply-settings .form-table label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.wp-friendlink-apply-settings .form-table input[type="checkbox"] {
+    margin-right: 8px;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.wp-friendlink-apply-settings .section-divider {
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #e0e0e0, transparent);
+    margin: 2px 0;
+}
+
+.wp-friendlink-apply-settings .usage-section ol,
+.wp-friendlink-apply-settings .usage-section ul {
+    margin: 15px 0;
+    padding-left: 25px;
+}
+
+.wp-friendlink-apply-settings .usage-section li {
+    margin: 8px 0;
+    line-height: 1.6;
+}
+
+.wp-friendlink-apply-settings .usage-section code {
+    background: #f5f5f5;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    color: #e83e8c;
+    font-size: 0.9em;
+}
+
+.wp-friendlink-apply-settings .submit-button {
+    margin-top: 30px;
+    padding: 12px 30px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.wp-friendlink-apply-settings .submit-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.wp-friendlink-apply-settings .submit-button:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 1200px) {
+    .wp-friendlink-apply-applications {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+    
+    .wp-friendlink-apply-settings {
+        max-width: 100%;
+    }
+
+    .wp-friendlink-apply-applications .applications-table {
+        overflow-x: auto;
+    }
+
+    .wp-friendlink-apply-applications .applications-table .site-name {
+        max-width: 150px;
+    }
+
+    .wp-friendlink-apply-applications .applications-table .site-url {
+        max-width: 150px;
+    }
+
+    .wp-friendlink-apply-applications .applications-table .user-link {
+        max-width: 120px;
+    }
+
+    .wp-friendlink-apply-applications .applications-table .description {
+        max-width: 150px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .wp-friendlink-apply-applications .applications-table {
+        overflow-x: auto;
+        display: block;
+    }
+
+    .wp-friendlink-apply-applications .applications-table thead,
+    .wp-friendlink-apply-applications .applications-table tbody,
+    .wp-friendlink-apply-applications .applications-table tr {
+        display: block;
+    }
+
+    .wp-friendlink-apply-applications .applications-table thead {
+        display: none;
+    }
+
+    .wp-friendlink-apply-applications .applications-table tbody tr {
+        margin-bottom: 15px;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        padding: 15px;
+        background: #fff;
+    }
+
+    .wp-friendlink-apply-applications .applications-table td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .wp-friendlink-apply-applications .applications-table td:last-child {
+        border-bottom: none;
+    }
+
+    .wp-friendlink-apply-applications .applications-table td:before {
+        content: attr(data-label);
+        font-weight: 600;
+        color: #667eea;
+        margin-right: 15px;
+        flex-shrink: 0;
+    }
+
+    .wp-friendlink-apply-applications .applications-table .site-name,
+    .wp-friendlink-apply-applications .applications-table .site-url,
+    .wp-friendlink-apply-applications .applications-table .user-link {
+        max-width: none;
+        overflow: visible;
+        text-overflow: clip;
+        white-space: normal;
+        word-break: break-all;
+    }
+
+    .wp-friendlink-apply-applications .applications-table .description {
+        max-width: none;
+        white-space: normal;
+        word-wrap: break-word;
+    }
+
+    .wp-friendlink-apply-applications .applications-table .actions {
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .wp-friendlink-apply-applications .applications-table .site-icon,
+    .wp-friendlink-apply-applications .applications-table .default-icon {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    /* 设置页面容器 */
+    .wrap.wp-friendlink-apply-settings {
+        margin: 0 !important;
+        padding: 0 12px !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+    
+    /* 卡片容器 */
+    .wp-friendlink-apply-settings .cards-container {
+        margin: 0;
+        width: 100%;
+        gap: 0;
+    }
+    
+    .wp-friendlink-apply-settings .cards-container .card {
+        margin: 0 0 15px 0;
+    }
+    
+    /* 使用说明部分 */
+    .wp-friendlink-apply-settings .usage-section {
+        margin: 0 0 15px 0;
+        width: 100%;
+    }
+    
+    .wp-friendlink-apply-settings .usage-section.card {
+        margin: 0 0 15px 0;
+    }
+    
+    /* 卡片样式 - 圆角阴影 */
+    .wp-friendlink-apply-settings .card {
+        padding: 18px;
+        border-radius: 12px;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+        border: 1px solid #e8e8e8;
+    }
+    
+    /* 卡片标题 */
+    .wp-friendlink-apply-settings .card h3 {
+        font-size: 1.1em;
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+    }
+    
+    /* 标题样式 */
+    .wrap.wp-friendlink-apply-settings h1 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+        padding: 0 4px;
+    }
+
+    .card h3 {
+        font-size: 18px;
+    }
+
+    .wp-friendlink-apply-actions {
+        flex-direction: column;
+    }
+
+    .wp-friendlink-apply-actions button {
+        width: 100%;
+    }
+
+    .wp-friendlink-apply-applications {
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+
+    .wp-friendlink-apply-settings .cards-container {
+        flex-direction: column;
+    }
+
+    .wp-friendlink-apply-settings .cards-container .card {
+        min-width: 100%;
+    }
+
+    .wp-friendlink-apply-settings .form-table {
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    .wp-friendlink-apply-settings .form-table th,
+    .wp-friendlink-apply-settings .form-table td {
+        display: block;
+        width: 100%;
+        padding: 12px 15px;
+    }
+
+    .wp-friendlink-apply-settings .form-table th {
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        border-bottom: 1px solid #e0e0e0;
+        font-size: 0.95em;
+        font-weight: 600;
+    }
+
+    .wp-friendlink-apply-settings .form-table td {
+        background: #fff;
+    }
+
+    .wp-friendlink-apply-settings .form-table input[type="text"],
+    .wp-friendlink-apply-settings .form-table textarea {
+        max-width: 100%;
+        padding: 10px 12px;
+        border-radius: 6px;
+        border: 1px solid #ddd;
+        font-size: 16px; /* 防止iOS缩放 */
+    }
+
+    .wp-friendlink-apply-settings .form-table input[type="text"]:focus,
+    .wp-friendlink-apply-settings .form-table textarea:focus {
+        border-color: #667eea;
+        box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    }
+
+    .wp-friendlink-apply-settings .form-table .description {
+        font-size: 12px;
+        color: #666;
+        margin-top: 6px;
+    }
+
+    .wp-friendlink-apply-applications .nav-tab-wrapper {
+        flex-wrap: wrap;
+    }
+
+    .wp-friendlink-apply-applications .nav-tab {
+        flex: 1;
+        text-align: center;
+        min-width: 100px;
+        margin-bottom: 5px;
+    }
+
+    .wp-friendlink-apply-applications .applications-table tbody tr {
+        padding: 15px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .wp-friendlink-apply-applications .applications-table td {
+        padding: 10px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+    
+    .wp-friendlink-apply-applications .applications-table td.column-response {
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
+    }
+    
+    .wp-friendlink-apply-applications .applications-table td.column-response:before {
+        margin-bottom: 0;
+        margin-right: 10px;
+    }
+
+    .wp-friendlink-apply-applications .applications-table td:before {
+        content: attr(data-label);
+        font-weight: 600;
+        color: #667eea;
+        margin-bottom: 5px;
+        font-size: 14px;
+        width: 100%;
+    }
+
+    .wp-friendlink-apply-applications .applications-table .actions {
+        flex-direction: column;
+        gap: 8px;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .wp-friendlink-apply-applications .applications-table .button {
+        width: 100%;
+        text-align: center;
+        padding: 8px 16px;
+        font-size: 13px;
+        min-width: 0;
+    }
+
+    .wp-friendlink-apply-applications .applications-table .site-name,
+    .wp-friendlink-apply-applications .applications-table .site-url,
+    .wp-friendlink-apply-applications .applications-table .user-link {
+        max-width: 100%;
+        word-break: break-all;
+    }
+
+    .wp-friendlink-apply-applications .applications-table .description {
+        max-width: 100%;
+        white-space: normal;
+        word-wrap: break-word;
+    }
+
+    .wp-friendlink-apply-applications .page-title {
+        font-size: 1.5em;
+        margin-bottom: 5px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .wp-friendlink-apply-applications .page-title .icon {
+        margin-bottom: 10px;
+    }
+
+    .wp-friendlink-apply-applications .nav-tab-wrapper {
+        margin-bottom: 5px;
+    }
+
+    .wp-friendlink-apply-applications .nav-tab {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    .wp-friendlink-apply-applications .nav-tab .count {
+        font-size: 10px;
+        padding: 2px 8px;
+    }
+
+    /* 变量表格移动端优化 */
+    .wp-friendlink-apply-settings .variables-table {
+        font-size: 13px;
+        display: block;
+        overflow-x: auto;
+    }
+
+    .wp-friendlink-apply-settings .variables-table thead {
+        display: none;
+    }
+
+    .wp-friendlink-apply-settings .variables-table tbody,
+    .wp-friendlink-apply-settings .variables-table tr {
+        display: block;
+        width: 100%;
+    }
+
+    .wp-friendlink-apply-settings .variables-table tbody tr {
+        margin-bottom: 12px;
+        border: 1px solid #e8e8e8;
+        border-radius: 10px;
+        background: #fff;
+        padding: 12px;
+        box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
+    }
+
+    .wp-friendlink-apply-settings .variables-table td {
+        display: block;
+        width: 100%;
+        padding: 8px 0;
+        border-bottom: 1px solid #f5f5f5;
+        text-align: left;
+        font-size: 13px;
+    }
+
+    .wp-friendlink-apply-settings .variables-table td:last-child {
+        border-bottom: none;
+    }
+
+    .wp-friendlink-apply-settings .variables-table td:before {
+        content: attr(data-label);
+        display: block;
+        font-weight: 600;
+        color: #667eea;
+        margin-bottom: 5px;
+        font-size: 13px;
+    }
+
+    .wp-friendlink-apply-settings .variables-table code {
+        font-size: 12px;
+        padding: 4px 8px;
+        word-break: break-all;
+        background: #f8f9fa;
+        border-radius: 4px;
+    }
+
+    /* Info box 移动端优化 */
+    .wp-friendlink-apply-settings .info-box {
+        padding: 14px;
+        margin-top: 10px;
+        border-radius: 8px;
+        border-left-width: 3px;
+    }
+
+    .wp-friendlink-apply-settings .info-box strong {
+        font-size: 14px;
+        margin-bottom: 8px;
+        display: block;
+    }
+
+    .wp-friendlink-apply-settings .info-box p {
+        font-size: 13px;
+        margin: 6px 0;
+        line-height: 1.5;
+    }
+
+    .wp-friendlink-apply-settings .info-box code {
+        font-size: 12px;
+        word-break: break-all;
+        background: rgba(255, 255, 255, 0.5);
+        padding: 2px 6px;
+        border-radius: 3px;
+    }
+
+    /* 使用说明移动端优化 */
+    .wp-friendlink-apply-settings .usage-section h3 {
+        font-size: 1.1em;
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+    }
+
+    .wp-friendlink-apply-settings .usage-section h4 {
+        font-size: 14px;
+        margin-top: 18px;
+        margin-bottom: 10px;
+        color: #1d2327;
+    }
+
+    .wp-friendlink-apply-settings .usage-section ol,
+    .wp-friendlink-apply-settings .usage-section ul {
+        padding-left: 22px;
+        margin: 12px 0;
+    }
+
+    .wp-friendlink-apply-settings .usage-section li {
+        font-size: 13px;
+        margin: 8px 0;
+        line-height: 1.7;
+    }
+
+    .wp-friendlink-apply-settings .usage-section code {
+        font-size: 12px;
+        word-break: break-all;
+        display: inline-block;
+        margin: 2px 0;
+        background: #f8f9fa;
+        padding: 3px 8px;
+        border-radius: 4px;
+        color: #e83e8c;
+    }
+
+    /* 卡片移动端优化 */
+    .wp-friendlink-apply-settings .card {
+        padding: 15px;
+        margin: 0 0 15px 0;
+    }
+
+    .wp-friendlink-apply-settings .card h3 {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+
+    /* 保存按钮移动端优化 */
+    .wp-friendlink-apply-settings .submit-button {
+        width: 100%;
+        padding: 14px;
+        font-size: 1em;
+        border-radius: 8px;
+        margin-top: 20px;
+    }
+
+    /* Info box 容器移动端优化 */
+    .wp-friendlink-apply-settings .info-boxes-container {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .wp-friendlink-apply-settings .info-boxes-container .info-box {
+        min-width: 100%;
+        flex: none;
+    }
+}
+
+/* 更小屏幕的额外优化 */
+@media (max-width: 480px) {
+    .wrap.wp-friendlink-apply-settings {
+        padding: 0 10px !important;
+    }
+
+    .wp-friendlink-apply-settings h1 {
+        font-size: 1.3em !important;
+    }
+
+    .wp-friendlink-apply-settings .card {
+        padding: 15px !important;
+        margin-bottom: 12px !important;
+        border-radius: 10px !important;
+    }
+
+    .wp-friendlink-apply-settings .card h3 {
+        font-size: 1em !important;
+    }
+
+    .wp-friendlink-apply-settings .variables-table tbody tr {
+        padding: 10px !important;
+    }
+
+    .wp-friendlink-apply-settings .info-box {
+        padding: 12px !important;
+    }
+
+    .wp-friendlink-apply-settings .form-table th,
+    .wp-friendlink-apply-settings .form-table td {
+        padding: 10px 12px !important;
+    }
+
+    .wp-friendlink-apply-settings .submit-button {
+        padding: 12px !important;
+        font-size: 0.95em !important;
+    }
+}
+
+/* 设置页面标题样式 */
+.wrap.wp-friendlink-apply-settings h1 {
+    margin-bottom: 5px;
+    color: #1d2327;
+    font-size: 2em;
+}
+
+@media (max-width: 768px) {
+    .wrap.wp-friendlink-apply-settings h1 {
+        font-size: 1.5em;
+        margin-bottom: 5px;
+        padding: 0 4px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .wp-friendlink-apply-settings h1 {
+        font-size: 1.3em;
+        margin-bottom: 4px;
+    }
+}
+
+.stats-overview {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.stat-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px 15px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e9ecef;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.stat-card .stat-number {
+    display: block;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.stat-card .stat-label {
+    display: block;
+    font-size: 12px;
+    color: #666;
+    font-weight: 500;
+}
+
+.stat-card.total {
+    border-left: 4px solid #6c757d;
+}
+
+.stat-card.total .stat-number {
+    color: #6c757d;
+}
+
+.stat-card.pending {
+    border-left: 4px solid #ffc107;
+}
+
+.stat-card.pending .stat-number {
+    color: #ffc107;
+}
+
+.stat-card.approved {
+    border-left: 4px solid #28a745;
+}
+
+.stat-card.approved .stat-number {
+    color: #28a745;
+}
+
+.stat-card.rejected {
+    border-left: 4px solid #dc3545;
+}
+
+.stat-card.rejected .stat-number {
+    color: #dc3545;
+}
+
+.stat-card.disabled {
+    border-left: 4px solid #6c757d;
+}
+
+.stat-card.disabled .stat-number {
+    color: #6c757d;
+}
+
+.stat-card.normal {
+    border-left: 4px solid #28a745;
+}
+
+.stat-card.normal .stat-number {
+    color: #28a745;
+}
+
+.stat-card.abnormal {
+    border-left: 4px solid #fd7e14;
+}
+
+.stat-card.abnormal .stat-number {
+    color: #fd7e14;
+}
+
+.stat-card.no-backlink {
+    border-left: 4px solid #dc3545;
+}
+
+.stat-card.no-backlink .stat-number {
+    color: #dc3545;
+}
+
+.stat-card.clickable {
+    cursor: pointer;
+}
+
+.stat-card.clickable:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.stat-card.clickable.active {
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.3);
+}
+
+.site-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.filter-bar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.filter-select {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: #fff;
+    font-size: 13px;
+    min-width: 140px;
+    cursor: pointer;
+    transition: border-color 0.2s ease;
+}
+
+.filter-select:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.filter-search {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 13px;
+    flex: 1;
+    min-width: 200px;
+    max-width: 300px;
+}
+
+.filter-search:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.site-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.site-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #e9ecef;
+}
+
+.site-icon-default {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.description-text {
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #666;
+}
+
+.time-text {
+    display: block;
+    color: #666;
+    font-size: 12px;
+    margin-bottom: 4px;
+}
+
+.status-tag {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.status-tag.status-pending {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.status-tag.status-approved {
+    background: #d4edda;
+    color: #155724;
+}
+
+.status-tag.status-rejected {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.backlink-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 11px;
+    font-weight: 500;
+    margin-left: 5px;
+}
+
+.backlink-badge.has-backlink {
+    background: #d4edda;
+    color: #155724;
+}
+
+.backlink-badge.no-backlink {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.button-small {
+    padding: 4px 8px !important;
+    min-width: auto !important;
+    font-size: 12px !important;
+}
+
+.status-response-cell {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+}
+
+.status-response-cell .site-status-badge {
+    font-size: 11px;
+    padding: 2px 6px;
+}
+
+.site-status-badge.checking {
+    color: #666;
+    background: #f0f0f1;
+    border-radius: 3px;
+}
+
+.site-status-badge.status-ok {
+    color: #28a745;
+}
+
+.site-status-badge.status-client_error,
+.site-status-badge.status-server_error {
+    color: #ffc107;
+}
+
+.site-status-badge.status-error {
+    color: #dc3545;
+}
+
+.response-time-small {
+    font-size: 11px;
+    color: #666;
+}
+
+.response-time-small.fast {
+    color: #28a745;
+}
+
+.response-time-small.medium {
+    color: #ffc107;
+}
+
+.response-time-small.slow {
+    color: #dc3545;
+}
+
+.bulk-actions-bar {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 15px;
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    flex-wrap: wrap;
+}
+
+.bulk-actions-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.wp-friendlink-apply-applications .bulk-actions-bar {
+    justify-content: flex-start;
+}
+
+.wp-friendlink-apply-links .bulk-actions-bar {
+    justify-content: flex-start;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto;
+}
+
+.search-box input[type="text"] {
+    padding: 6px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 13px;
+    min-width: 200px;
+}
+
+.search-box input[type="text"]:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.1);
+}
+
+.select-all-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.select-all-wrapper input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.bulk-btn {
+    padding: 6px 14px !important;
+    font-size: 13px !important;
+    border-radius: 4px !important;
+    transition: all 0.2s ease;
+}
+
+.bulk-btn:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.bulk-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.bulk-btn-delete {
+    color: #dc3545 !important;
+    border-color: #dc3545 !important;
+}
+
+.bulk-btn-delete:hover:not(:disabled) {
+    background: #dc3545 !important;
+    color: #fff !important;
+}
+
+.applications-table th,
+.applications-table td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.applications-table .column-check {
+    width: 40px;
+    text-align: center;
+}
+
+.applications-table .column-check input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.applications-table .site-name {
+    font-size: 14px;
+}
+
+.applications-table .site-url {
+    font-size: 13px;
+    color: #0073aa;
+    text-decoration: none;
+}
+
+.applications-table .site-url:hover {
+    color: #00a0d2;
+    text-decoration: underline;
+}
+
+.bulk-check-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100000;
+}
+
+.bulk-check-modal {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+    max-width: 700px;
+    width: 90%;
+    max-height: 80vh;
+    overflow: hidden;
+}
+
+.bulk-check-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+}
+
+.bulk-check-modal-title {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.bulk-check-modal-close {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.bulk-check-modal-close:hover {
+    opacity: 1;
+}
+
+.bulk-check-modal-body {
+    padding: 20px;
+    max-height: calc(80vh - 60px);
+    overflow-y: auto;
+}
+
+.bulk-check-results h3 {
+    margin: 0 0 15px 0;
+    font-size: 15px;
+    color: #333;
+}
+
+.bulk-check-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+}
+
+.bulk-check-table th,
+.bulk-check-table td {
+    padding: 10px 12px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.bulk-check-table th {
+    background: #f8f9fa;
+    font-weight: 600;
+    color: #555;
+}
+
+.bulk-check-table tr:hover {
+    background: #f8f9fa;
+}
+
+.bulk-check-table a {
+    color: #0073aa;
+    text-decoration: none;
+}
+
+.bulk-check-table a:hover {
+    text-decoration: underline;
+}
+
+.backlink-status {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.backlink-status.has-backlink {
+    background: #d4edda;
+    color: #155724;
+}
+
+.backlink-status.no-backlink {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.bulk-check-summary {
+    margin: 0;
+    padding: 10px;
+    background: #f0f0f1;
+    border-radius: 4px;
+    text-align: center;
+    color: #555;
+    font-size: 13px;
+}
+
+.wp-friendlink-apply-links {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.wp-friendlink-apply-links .page-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    color: #1d2327;
+    font-size: 2em;
+}
+
+.wp-friendlink-apply-links .page-title .icon {
+    font-size: 1.2em;
+    margin-right: 12px;
+}
+
+.wp-friendlink-apply-links .links-table {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow-x: auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    table-layout: auto;
+    width: 100%;
+}
+
+.wp-friendlink-apply-links .links-table thead {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    white-space: nowrap;
+}
+
+.wp-friendlink-apply-links .links-table th {
+    padding: 15px 12px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.95em;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+.wp-friendlink-apply-links .links-table th:last-child {
+    border-right: none;
+}
+
+.wp-friendlink-apply-links .links-table td {
+    padding: 12px;
+    text-align: center;
+    vertical-align: middle;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.wp-friendlink-apply-links .links-table tbody tr:hover {
+    background: #f8f9fa;
+}
+
+.wp-friendlink-apply-links .links-table .column-check {
+    width: 40px;
+    text-align: center;
+}
+
+.wp-friendlink-apply-links .links-table .column-check input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.wp-friendlink-apply-links .stat-card.visible {
+    border-left: 4px solid #28a745;
+}
+
+.wp-friendlink-apply-links .stat-card.visible .stat-number {
+    color: #28a745;
+}
+
+.wp-friendlink-apply-links .stat-card.disabled {
+    border-left: 4px solid #6c757d;
+}
+
+.wp-friendlink-apply-links .stat-card.disabled .stat-number {
+    color: #6c757d;
+}
+
+.wp-friendlink-apply-links .stat-card.total {
+    border-left: 4px solid #667eea;
+}
+
+.wp-friendlink-apply-links .stat-card.total .stat-number {
+    color: #667eea;
+}
+
+.status-tag.status-visible {
+    background: #d4edda;
+    color: #155724;
+}
+
+.status-tag.status-hidden {
+    background: #e2e3e5;
+    color: #383d41;
+}
+
+.wp-friendlink-apply-links .actions {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.wp-friendlink-apply-links .button-small {
+    padding: 4px 8px !important;
+    min-width: auto !important;
+    font-size: 12px !important;
+}
+
+.enable-link-btn {
+    background: #28a745 !important;
+    border-color: #28a745 !important;
+    color: #fff !important;
+}
+
+.disable-link-btn {
+    background: #6c757d !important;
+    border-color: #6c757d !important;
+    color: #fff !important;
+}
+
+.delete-link-btn {
+    background: #dc3545 !important;
+    border-color: #dc3545 !important;
+    color: #fff !important;
+}
+
+@media (max-width: 768px) {
+    .wp-friendlink-apply-links .links-table {
+        overflow-x: auto;
+        display: block;
+    }
+
+    .wp-friendlink-apply-links .links-table thead {
+        display: none;
+    }
+
+    .wp-friendlink-apply-links .links-table tbody tr {
+        display: block;
+        margin-bottom: 15px;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        padding: 15px;
+        background: #fff;
+    }
+
+    .wp-friendlink-apply-links .links-table td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+        border-bottom: 1px solid #f0f0f0;
+        text-align: right;
+    }
+
+    .wp-friendlink-apply-links .links-table td:before {
+        content: attr(data-label);
+        font-weight: 600;
+        color: #667eea;
+        font-size: 13px;
+        margin-right: 10px;
+    }
+
+    .wp-friendlink-apply-links .links-table td:last-child {
+        border-bottom: none;
+    }
+
+    .wp-friendlink-apply-links .actions {
+        flex-direction: column;
+        gap: 8px;
+        width: 100%;
+    }
+
+    .wp-friendlink-apply-links .actions .button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.edit-link-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 999999;
+}
+
+.edit-link-modal-overlay.show {
+    display: flex;
+}
+
+.edit-link-modal {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    width: 90%;
+    max-height: 80vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.edit-link-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+}
+
+.edit-link-modal-title {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.edit-link-modal-close {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.edit-link-modal-close:hover {
+    opacity: 1;
+}
+
+.edit-link-modal-body {
+    padding: 20px;
+    max-height: calc(80vh - 60px);
+    overflow-y: auto;
+}
+
+.edit-link-modal-body .form-field {
+    margin-bottom: 15px;
+}
+
+.edit-link-modal-body .form-field label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.edit-link-modal-body .form-field input,
+.edit-link-modal-body .form-field textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease;
+}
+
+.edit-link-modal-body .form-field input:focus,
+.edit-link-modal-body .form-field textarea:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.edit-link-modal-body .form-field textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.edit-link-modal-body .form-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.edit-link-modal-body .form-actions .button {
+    padding: 8px 20px;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.edit-link-modal-body .form-actions .button-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    color: #fff;
+}
+
+.edit-link-modal-body .form-actions .button-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.4);
+}
+
+.edit-link-modal-body .form-actions .cancel-edit-btn {
+    background: #f0f0f1;
+    border: 1px solid #ddd;
+    color: #333;
+}
+
+.edit-link-modal-body .form-actions .cancel-edit-btn:hover {
+    background: #e0e0e0;
+}
+
+.settings-header-icon {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.settings-submit-area {
+    text-align: center;
+    margin-top: 20px;
+}

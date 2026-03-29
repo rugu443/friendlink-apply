@@ -1,0 +1,1071 @@
+:root {
+    --fl-primary: #667eea;
+    --fl-primary-dark: #5a6fd6;
+    --fl-success: #28a745;
+    --fl-danger: #dc3545;
+    --fl-warning: #fd7e14;
+    --fl-info: #17a2b8;
+    --fl-text: #333;
+    --fl-text-light: #666;
+    --fl-text-muted: #6c757d;
+    --fl-bg: #fff;
+    --fl-bg-light: #f8f9fa;
+    --fl-border: #e9ecef;
+    --fl-radius: 8px;
+    --fl-radius-sm: 6px;
+    --fl-radius-lg: 12px;
+    --fl-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    --fl-shadow-sm: 0 1px 4px rgba(0,0,0,0.1);
+    --fl-shadow-lg: 0 8px 24px rgba(102,126,234,0.15);
+    --fl-transition: all 0.3s ease;
+}
+
+.wp-friendlink-apply-form-wrapper {
+    width: 100%;
+    max-width: 100%;
+    margin: 20px 0 0;
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    position: relative;
+    overflow: visible;
+}
+
+.wp-friendlink-apply-header {
+    text-align: left;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 1;
+    padding: 10px 15px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e9ecef;
+    display: flex;
+    align-items: baseline;
+    gap: 15px;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.wp-friendlink-apply-header .form-title{
+    margin: 0;
+    padding: 0;
+    color: #333;
+    font-size: 18px;
+    font-weight: 700;
+    white-space: nowrap;
+    line-height: 1.5;
+}
+
+.wp-friendlink-apply-header .form-description{
+    margin: 0;
+    padding: 0;
+    color: #666;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.wp-friendlink-apply-form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e9ecef;
+}
+
+.wp-friendlink-apply-form .form-group {
+    margin-bottom: 15px;
+}
+
+.wp-friendlink-apply-form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #333;
+    font-size: 14px;
+}
+
+.wp-friendlink-apply-form .required {
+    color: #e74c3c;
+}
+
+.wp-friendlink-apply-form input[type="text"],
+.wp-friendlink-apply-form input[type="url"],
+.wp-friendlink-apply-form input[type="email"],
+.wp-friendlink-apply-form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 2px solid #e9ecef;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+.wp-friendlink-apply-form input[type="text"]:focus,
+.wp-friendlink-apply-form input[type="url"]:focus,
+.wp-friendlink-apply-form input[type="email"]:focus,
+.wp-friendlink-apply-form textarea:focus {
+    border-color: #667eea;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.wp-friendlink-apply-form .form-row {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.wp-friendlink-apply-form .form-row .form-group {
+    flex: 1;
+    min-width: 200px;
+}
+
+.wp-friendlink-apply-form .input-group {
+    display: flex;
+    gap: 10px;
+    align-items: stretch;
+}
+
+.wp-friendlink-apply-form .input-group input {
+    flex: 1;
+}
+
+.wp-friendlink-apply-form .input-group .button {
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.wp-friendlink-apply-form .icon-wrapper {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.wp-friendlink-apply-form .icon-wrapper input {
+    flex: 1;
+}
+
+.wp-friendlink-apply-form .icon-preview {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background: #f8f9fa;
+    border: 2px solid #e9ecef;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.wp-friendlink-apply-form .icon-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.wp-friendlink-apply-form .icon-preview.empty {
+    background: #f8f9fa;
+}
+
+.wp-friendlink-apply-form .icon-preview.empty::after {
+    content: '🔗';
+    font-size: 20px;
+    opacity: 0.3;
+}
+
+.wp-friendlink-apply-form .button {
+    background: #3b82f6;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.wp-friendlink-apply-form .button:hover {
+    background: #2563eb;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.wp-friendlink-apply-form .button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.wp-friendlink-apply-form .button-secondary {
+    background: #3b82f6 !important;
+    color: #fff !important;
+    border: none !important;
+}
+
+.wp-friendlink-apply-form .button-secondary:hover {
+    background: #2563eb !important;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3) !important;
+}
+
+#fetch-site-info {
+    background: #3b82f6 !important;
+    color: #fff !important;
+    border: none !important;
+    padding: 12px 24px !important;
+    border-radius: 8px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    position: relative !important;
+    overflow: hidden !important;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3) !important;
+}
+
+#fetch-site-info:hover {
+    background: #2563eb !important;
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4) !important;
+    transform: translateY(-2px) !important;
+}
+
+#fetch-site-info:active {
+    transform: translateY(0) !important;
+    box-shadow: 0 3px 10px rgba(59, 130, 246, 0.3) !important;
+}
+
+
+
+.wp-friendlink-apply-form .form-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.wp-friendlink-apply-form .form-message {
+    margin-top: 30px;
+    padding: 20px 28px;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    animation: slideIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.wp-friendlink-apply-form .form-message.success {
+    background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+    color: #155724;
+    border: 2px solid #b8dabc;
+    box-shadow: 0 6px 20px rgba(40, 167, 69, 0.25);
+}
+
+.wp-friendlink-apply-form .form-message.error {
+    background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%);
+    color: #721c24;
+    border: 2px solid #f1b0b7;
+    box-shadow: 0 6px 20px rgba(220, 53, 69, 0.25);
+}
+
+.wp-friendlink-apply-form .button .dashicons {
+    vertical-align: middle;
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+.wp-friendlink-apply-form .button .dashicons.spin {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* 弹窗样式 */
+.wp-friendlink-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.wp-friendlink-modal.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.wp-friendlink-modal .modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+}
+
+.wp-friendlink-modal .modal-content {
+    position: relative;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 90%;
+    transform: scale(0.8) translateY(20px);
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    overflow: hidden;
+}
+
+.wp-friendlink-modal.show .modal-content {
+    transform: scale(1) translateY(0);
+}
+
+.wp-friendlink-modal .modal-header {
+    padding: 30px 30px 15px;
+    text-align: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.wp-friendlink-modal.success .modal-header {
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+}
+
+.wp-friendlink-modal.error .modal-header {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a5a 100%);
+}
+
+.wp-friendlink-modal .modal-icon {
+    font-size: 48px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.wp-friendlink-modal .modal-header h3 {
+    margin: 0;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.wp-friendlink-modal .modal-body {
+    padding: 25px 30px;
+    text-align: center;
+}
+
+.wp-friendlink-modal .modal-body p {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.wp-friendlink-modal .modal-footer {
+    padding: 0 30px 30px;
+    text-align: center;
+}
+
+.wp-friendlink-modal .modal-close-btn {
+    background: #3b82f6;
+    color: #fff;
+    border: none;
+    padding: 12px 40px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+.wp-friendlink-modal.success .modal-close-btn {
+    background: #3b82f6;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+.wp-friendlink-modal.error .modal-close-btn {
+    background: #3b82f6;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+.wp-friendlink-modal .modal-close-btn:hover {
+    background: #2563eb;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+}
+
+.wp-friendlink-modal.success .modal-close-btn:hover {
+    background: #2563eb;
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+}
+
+.wp-friendlink-modal.error .modal-close-btn:hover {
+    background: #2563eb;
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+}
+
+/* 响应式适配 */
+@media screen and (max-width: 768px) {
+    .wp-friendlink-apply-form-wrapper {
+        padding: 0;
+    }
+    
+    .wp-friendlink-apply-header {
+        padding: 12px 15px;
+        margin-bottom: 12px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+        text-align: left;
+    }
+    
+    .wp-friendlink-apply-header .form-title {
+        font-size: 16px;
+    }
+    
+    .wp-friendlink-apply-header .form-description {
+        font-size: 12px;
+    }
+    
+    .wp-friendlink-apply-form {
+        padding: 15px;
+    }
+    
+    .wp-friendlink-apply-form .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .wp-friendlink-apply-form .form-row .form-group {
+        min-width: 100%;
+    }
+    
+    .wp-friendlink-apply-form .form-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .wp-friendlink-apply-form .button {
+        width: 100%;
+        padding: 12px 20px;
+    }
+    
+    .wp-friendlink-apply-form .form-message {
+        padding: 18px 24px;
+        font-size: 15px;
+    }
+    
+    .wp-friendlink-modal .modal-content {
+        width: 85%;
+        border-radius: 12px;
+    }
+    
+    .wp-friendlink-modal .modal-header {
+        padding: 20px 20px 10px;
+    }
+    
+    .wp-friendlink-modal .modal-icon {
+        font-size: 36px;
+    }
+    
+    .wp-friendlink-modal .modal-header h3 {
+        font-size: 18px;
+    }
+    
+    .wp-friendlink-modal .modal-body {
+        padding: 20px;
+    }
+    
+    .wp-friendlink-modal .modal-body p {
+        font-size: 15px;
+    }
+    
+    .wp-friendlink-modal .modal-footer {
+        padding: 0 20px 20px;
+    }
+    
+    .wp-friendlink-modal .modal-close-btn {
+        padding: 10px 30px;
+        font-size: 15px;
+    }
+    
+    /* 移动端自动获取按钮样式优化 */
+    #fetch-site-info {
+        padding: 10px 16px !important;
+        font-size: 13px !important;
+        min-width: auto !important;
+        flex-shrink: 0 !important;
+    }
+    
+    #fetch-site-info .dashicons {
+        font-size: 16px !important;
+        margin-right: 4px !important;
+    }
+    
+    .wp-friendlink-apply-form .input-group {
+        flex-wrap: wrap;
+    }
+    
+    .wp-friendlink-apply-form .input-group input {
+        min-width: 150px;
+    }
+}
+
+.wp-friendlink-list-wrapper {
+    margin: 10px 0;
+    padding: 10px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e9ecef;
+}
+
+.friendlink-list-title {
+    margin: 0 0 8px 0;
+    padding: 8px 10px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e9ecef;
+    color: #333;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: left;
+    line-height: 1.5;
+}
+
+.friendlink-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: #f8f9fa;
+    border: 2px solid #e9ecef;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.friendlink-item:hover {
+    background: #fff;
+    border-color: #667eea;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+    transform: translateY(-2px);
+}
+
+.friendlink-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.friendlink-icon-default {
+    font-size: 18px;
+}
+
+.friendlink-name {
+    font-weight: 500;
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.friendlink-backlink-status {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.friendlink-backlink-status.has-backlink {
+    background: #28a745;
+}
+
+.friendlink-backlink-status.no-backlink {
+    background: #dc3545;
+}
+
+/* 图片卡片式样式 */
+.friendlink-card-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 12px;
+}
+
+.friendlink-card-item {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    background: #fff;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    position: relative;
+    min-height: 70px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.friendlink-card-item:hover {
+    border-color: #667eea;
+    box-shadow: 0 8px 24px rgba(102, 126, 234, 0.15);
+    transform: translateY(-3px);
+}
+
+.friendlink-card-icon-wrapper {
+    position: relative;
+    flex-shrink: 0;
+    margin-right: 14px;
+}
+
+.friendlink-card-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #f0f0f0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.friendlink-card-icon-default {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 50%;
+    font-size: 24px;
+    color: #fff;
+    border: 3px solid #f0f0f0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.friendlink-card-status-dot {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.friendlink-card-status-dot.has-backlink {
+    background: #28a745;
+}
+
+.friendlink-card-status-dot.no-backlink {
+    background: #dc3545;
+}
+
+.friendlink-card-content {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.friendlink-card-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.friendlink-card-desc {
+    font-size: 13px;
+    color: #666;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.4;
+}
+
+.friendlink-card-meta {
+    position: absolute;
+    bottom: 8px;
+    right: 12px;
+}
+
+.friendlink-response-time {
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-weight: 500;
+}
+
+.friendlink-response-time.fast {
+    background: #d4edda;
+    color: #155724;
+}
+
+.friendlink-response-time.medium {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.friendlink-response-time.slow {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+/* 表格式样式 */
+.friendlink-table-wrapper {
+    overflow-x: auto;
+}
+
+.friendlink-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.friendlink-table th {
+    background: #f8f9fa;
+    padding: 10px 12px;
+    text-align: left;
+    font-weight: 600;
+    color: #333;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.friendlink-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #e9ecef;
+    vertical-align: middle;
+}
+
+.friendlink-table tbody tr:hover {
+    background: #f8f9fa;
+}
+
+.friendlink-table-link {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.friendlink-table-link:hover {
+    text-decoration: underline;
+}
+
+.friendlink-table-url {
+    font-size: 12px;
+    color: #666;
+    max-width: 200px;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.friendlink-status-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.friendlink-status-badge.status-ok {
+    background: #d4edda;
+    color: #155724;
+}
+
+.friendlink-status-badge.status-warning {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.friendlink-status-badge.status-error {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.friendlink-status-badge.status-unknown {
+    background: #e9ecef;
+    color: #6c757d;
+}
+
+.friendlink-backlink-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.friendlink-backlink-badge.has-backlink {
+    background: #d4edda;
+    color: #155724;
+}
+
+.friendlink-backlink-badge.no-backlink {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.friendlink-table .show-mobile {
+    display: none;
+}
+
+.friendlink-stats-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    padding: 8px 10px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+    gap: 8px;
+}
+
+.friendlink-stats-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    font-size: 13px;
+}
+
+.friendlink-stats-info .stats-item {
+    color: #666;
+}
+
+.friendlink-stats-info .stats-item strong {
+    color: #333;
+}
+
+.friendlink-stats-info .stats-normal strong {
+    color: #28a745;
+}
+
+.friendlink-stats-info .stats-abnormal strong {
+    color: #dc3545;
+}
+
+.friendlink-stats-info .stats-no-backlink strong {
+    color: #fd7e14;
+}
+
+.friendlink-filter-buttons {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.friendlink-filter-btn {
+    padding: 6px 14px;
+    border: 1px solid #dee2e6;
+    background: #fff;
+    border-radius: 20px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: #495057;
+}
+
+.friendlink-filter-btn:hover {
+    background: #e9ecef;
+}
+
+.friendlink-filter-btn.active {
+    background: #3b82f6;
+    color: #fff;
+    border-color: #3b82f6;
+}
+
+.friendlink-table tr.friendlink-row-hidden {
+    display: none;
+}
+
+/* 表格移动端响应式 - 保持单一表格，横向滚动 */
+@media screen and (max-width: 768px) {
+    .wp-friendlink-list-wrapper {
+        padding: 15px;
+        margin-top: 20px;
+    }
+    
+    .friendlink-list-title {
+        font-size: 16px;
+        margin-bottom: 15px;
+        padding: 12px;
+    }
+    
+    .friendlink-card-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+    
+    .friendlink-card-item {
+        padding: 10px;
+        min-height: auto;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    
+    .friendlink-card-icon-wrapper {
+        margin-right: 10px;
+        margin-bottom: 0;
+    }
+    
+    .friendlink-card-icon,
+    .friendlink-card-icon-default {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .friendlink-card-icon-default {
+        font-size: 18px;
+    }
+    
+    .friendlink-card-content {
+        flex: 1;
+        min-width: 0;
+    }
+    
+    .friendlink-card-name {
+        font-size: 13px;
+        margin-bottom: 2px;
+    }
+    
+    .friendlink-card-desc {
+        font-size: 11px;
+        display: block;
+        white-space: normal;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        line-height: 1.4;
+        max-height: 2.8em;
+    }
+    
+    .friendlink-card-meta {
+        position: absolute;
+        bottom: 8px;
+        right: 10px;
+    }
+    
+    .friendlink-response-time {
+        font-size: 10px;
+        padding: 2px 6px;
+    }
+    
+    .friendlink-table-wrapper {
+        width: 100%;
+        overflow-x: hidden;
+    }
+    
+    .friendlink-table {
+        width: 100%;
+        min-width: auto;
+        font-size: 12px;
+        table-layout: fixed;
+    }
+    
+    .friendlink-table th,
+    .friendlink-table td {
+        padding: 8px 6px;
+    }
+    
+    .friendlink-table .hide-mobile {
+        display: none;
+    }
+    
+    .friendlink-table .show-mobile {
+        display: table-cell;
+    }
+    
+    .friendlink-stats-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .friendlink-stats-info {
+        gap: 10px;
+        font-size: 12px;
+    }
+    
+    .friendlink-filter-buttons {
+        width: 100%;
+        justify-content: flex-start;
+    }
+    
+    .friendlink-filter-btn {
+        padding: 5px 10px;
+        font-size: 11px;
+    }
+    
+    .friendlink-status-badge,
+    .friendlink-backlink-badge {
+        font-size: 11px;
+        padding: 3px 6px;
+    }
+}
